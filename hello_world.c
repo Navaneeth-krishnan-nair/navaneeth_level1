@@ -1,6 +1,7 @@
 //Write the program to print "Hello World !"
 #include<stdio.h>
-void main()
+int main()
 {
  printf("my name is navaneeth");
+ return 0;
 }
