@@ -2,30 +2,29 @@
 #include<stdio.h>
 int input1()
 {
-    int a;
+    int a,b;
     printf("enter a number:");
     scanf("%d",&a);
     return a;
-}
-int input2()
-{
-    int b;
-    printf("enter a number:");
-    scanf("%d",&b);
-    return b;
 }
 int sum(int a,int b)
 {
     int s;
     s=a+b;
-    printf("sum of two numbers is:%d",s);
     return s;
+}
+int output(int a,int b,int s)
+{
+    int result;
+    printf("the sum of %d and %d is %d",a,b,s);
+    return result;
 }
 int main()
 {
     int n1,n2,n3;
     n1=input1();
-    n2=input2();
+    n2=input1();
     n3=sum(n1,n2);
+    output(n1,n2,n3);
     return 0;
 }
