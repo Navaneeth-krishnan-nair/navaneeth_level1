@@ -1,19 +1,13 @@
 //Write a program to add two user input numbers using one function.
 #include<stdio.h>
-#include<stdio.h>
-int input()
-{
-    int a;
-    printf("enter a number:");
-    scanf("%d",&a);
-    return a;
-}
 int main()
 {
-    int x,y,z;
-    x=input();
-    y=input();
-    z=x+y;
-    printf("the sum of %d and %d is %d",x,y,z);
+    int a,b,c;
+    printf("enter a number1:");
+    scanf("%f",&a);
+    printf("enter a number2:");
+    scanf("%f",&b);
+    c=a+b;
+    printf("the sum of %f and %f is %d",a,b,c);
     return 0;
 }
