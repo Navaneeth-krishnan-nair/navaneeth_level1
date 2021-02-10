@@ -4,7 +4,6 @@
 int input()
 {
     float a;
-    printf("enter points (a1,b1) and points (a2,b2):");
     scanf("%f",&a);
     return a;
 }
@@ -22,12 +21,15 @@ float display(float dist)
 int main()
 {
     float a1,b1,a2,b2,x,dist;
+    printf("enter a1:");
     a1=input();
+    printf("enter b1:");
     b1=input();
+    printf("enter a2:");
     a2=input();
+    printf("enter b2:");
     b2=input();
     dist=calculate_distance(a1,b1,a2,b2);
     display(dist);
     return 0;
 }
-
