@@ -7,24 +7,34 @@ int input()
     scanf("%d",&n);
     return n;
 }
-int add(int n)
+void inp_arr(int n,int a[n])
+{
+    printf("Enter the elements: ");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+}
+int add(int n,int a[])
 {
     int sum=0;
-    for(int i=1;i<=n;i++)
+    for(int i=0;i<n;i++)
     {
-        sum=sum+i;
+        sum=sum+a[i];
     }
     return sum;
 }
 void display(int n,int sum)
 {
-    printf("The sum of 1+2+3...%d+%d=%d",n-1,n,sum);
+    printf("Sum of the %d numbers is %d",n,sum);
 }
 int main()
 {
     int n,sum;
     n=input();
-    sum=add(n);
+    int a[n];
+    inp_arr(n,a);
+    sum=add(n,a);
     display(n,sum);
     return 0;
 }
