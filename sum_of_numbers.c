@@ -1,6 +1,7 @@
 //Write a program to find the sum of n different numbers using 4 functions
 #include<stdio.h>
 int input()
+
 {
     int n;
     printf("Enter the no of elements:");
@@ -9,9 +10,9 @@ int input()
 }
 void inp_arr(int n,int a[n])
 {
-    printf("Enter the elements: ");
     for(int i=0;i<n;i++)
     {
+        printf("Enter the element %d : ",i+1);
         scanf("%d",&a[i]);
     }
 }
@@ -24,9 +25,12 @@ int add(int n,int a[])
     }
     return sum;
 }
-void display(int n,int sum)
+void display(int n,int sum,int a[])
 {
-    printf("Sum of the %d numbers is %d",n,sum);
+    printf("Sum of ");
+    for(int i=0;i<n;i++)
+        printf(" %d +",a[i]);
+    printf(" is %d",sum);
 }
 int main()
 {
@@ -35,6 +39,6 @@ int main()
     int a[n];
     inp_arr(n,a);
     sum=add(n,a);
-    display(n,sum);
+    display(n,sum,a);
     return 0;
 }
